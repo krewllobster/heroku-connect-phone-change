@@ -26,6 +26,7 @@
                 var firstName = $("#firstName").val();
                 var lastName = $("#lastName").val();
                 var email = $("#email").val();
+                var NewEmail = $("#NewEmail").val();
                 var phone = $("#phone").val();
 
                 if (firstName.length == 0 || lastName.length == 0 || email.length == 0 || phone.length == 0) {
@@ -40,6 +41,7 @@
                             firstName: firstName,
                             lastName: lastName,
                             email: email,
+                            NewEmail: NewEmail,
                             phone: phone
                         }),
                         contentType: "application/json; charset=utf-8",
@@ -48,6 +50,7 @@
                             $("#firstName").val("");
                             $("#lastName").val("");
                             $("#email").val("");
+                            $("#NewEmail").val("");
                             $("#phone").val("");
                             $("#messageMessage").text("Record updated!");
                             $("#message").show();
@@ -87,10 +90,17 @@
                         <label for="lastName">Last Name</label>
                         <input type="text" class="form-control" id="lastName" placeholder="For verification" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="For verification" required>
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="email">New Email</label>
+                        <input type="email" class="form-control" id="NewEmail" placeholder="New Email" required>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <input type="tel" class="form-control" id="phone" placeholder="New Phone Number" required>
